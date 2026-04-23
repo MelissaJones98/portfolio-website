@@ -16,11 +16,9 @@ header {
 
 nav ul {
     list-style-type: none;
-    display: flex;
-    justify-content: center;
 }
 
-nav ul li {
+.btn {
     background-color: gainsboro;
     padding: 10px;
     border: 2px solid silver;

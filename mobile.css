@@ -1,3 +1,51 @@
 @media only screen and (min-width: 320px) and (max-width: 425px) {
-    
+    /* nav section */
+    header {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    h1 {
+        margin: 5px;
+    }
+
+    nav ul {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+
+    .btn {
+        width: 45px;
+        font-size: 10px;
+        text-align: center;
+    }
+
+    /* about me section */
+    #about-me, #projects, #skills, #contact {
+        padding: 10px;
+        margin-top: 20px;
+    }
+
+    h2 {
+        text-align: center;
+        margin: 0;
+    } /* applies to all h2s */
+
+    #bio {
+        margin: 10px;
+    }
+
+    #img-container {
+        display: flex;
+        justify-content: center;
+    }
+
+   /* contact section */
+   .contact-info {
+    font-size: 15px;
+   }
 }
