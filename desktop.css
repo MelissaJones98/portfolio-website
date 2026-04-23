@@ -6,32 +6,15 @@
         margin: 0;
     }
 
-    #projects, #skills {
-        padding: 15px;
-        margin-top: 20px;
-    }
-
-    header, #about-me, #section-container, #contact {
+    header, #about-me, #section-container, 
+    #contact, #projects, #skills {
         width: 800px;
-    }
-
-    #section-container {
-        display: flex;
-    }
-
-    #projects {
-        margin-right: 10px;
-        width: 400px;
-    }
-    
-    #skills {
-        margin-left: 10px;
-        width: 400px;
+        margin-top: 20px;
+        padding: 20px;
     }
 
     /* nav section */
     header {
-        margin-top: 20px;
         display: flex;
         align-items: center;
         justify-content: space-between;

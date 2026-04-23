@@ -49,3 +49,11 @@ nav ul {
 #contact {
     background-color: lightgrey;
 }
+
+.project-container {
+    background-color: gainsboro;
+    padding: 10px;
+    border: 2px solid silver;
+    border-radius: 2rem;
+    margin-bottom: 10px;
+}
