@@ -26,6 +26,14 @@ nav ul {
     border-radius: 2.5rem;
 }
 
+.btn:hover {
+    background-color: dimgrey;
+}
+
+.btn:hover a {
+    color: whitesmoke;
+}
+
 /* about me section */
 #about-me {
     background-color: lightgrey;
@@ -38,6 +46,22 @@ nav ul {
 /* projects section */
 #projects {
     background-color: lightgrey;
+}
+
+/* project section */
+.project-title-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.github-logo {
+    width: 30px;
+    margin: 10px;
+}
+
+.github-logo:hover {
+    border: 2px solid white;
 }
 
 /* skills section */
