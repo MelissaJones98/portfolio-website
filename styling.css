@@ -1,0 +1,52 @@
+body {
+    background-color: whitesmoke;
+    color: rgb(27, 27, 27);
+    font-family: "google sans";
+}
+
+a {
+    text-decoration: none;
+    color: rgb(27, 27, 27);
+}
+
+/* nav bar styling */
+header {
+    background-color: lightgrey;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    background-color: gainsboro;
+    padding: 10px;
+    border: 2px solid silver;
+    border-radius: 2.5rem;
+}
+
+/* about me section */
+#about-me {
+    background-color: lightgrey;
+}
+
+#melissa-jones {
+    width: 200px;
+}
+
+/* projects section */
+#projects {
+    background-color: lightgrey;
+}
+
+/* skills section */
+#skills {
+    background-color: lightgrey;
+}
+
+/*contact section*/
+#contact {
+    background-color: lightgrey;
+}
