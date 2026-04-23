@@ -1,5 +1,81 @@
 @media only screen and (min-width: 1024px) {
+    #projects, #skills, #contact {
+        padding: 15px;
+        margin-top: 20px;
+    }
+
+    header, #about-me, #section-container {
+        width: 80%;
+    }
+
+    #section-container {
+        display: flex;
+    }
+
+    #projects {
+        margin-right: 10px;
+        width: 400px;
+    }
+    
+    #skills {
+        margin-left: 10px;
+        width: 400px;
+    }
+
+    /* nav section */
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    h1 {
+        margin: 5px;
+    }
+
     nav ul {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .btn {
+        width: 80px;
+        font-size: 15px;
+        text-align: center;
+        margin: 5px;
+    }
+
+    /* about me section */
+    #about-me {
+        margin-top: 20px;
+    }
+
+    #about-me-container {
+        display: flex;
+        align-items: center;
+    }
+
+    #about-me-h2 {
+        padding-top: 10px;
+    }
+
+    #melissa-jones {
+        padding-right: 10px;
+        padding-bottom: 10px;
+    }
+
+    h2 {
+        text-align: center;
+        margin: 0;
+    } /* applies to all h2s */
+
+    #bio {
+        margin: 10px;
+    }
+
+    #img-container {
         display: flex;
         justify-content: center;
     }

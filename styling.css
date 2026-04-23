@@ -2,6 +2,7 @@ body {
     background-color: whitesmoke;
     color: rgb(27, 27, 27);
     font-family: "google sans";
+    width: 100%;
 }
 
 a {
@@ -31,7 +32,7 @@ nav ul {
 }
 
 #melissa-jones {
-    width: 200px;
+    width: 12.5rem;
 }
 
 /* projects section */
