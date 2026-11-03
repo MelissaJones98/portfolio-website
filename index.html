@@ -1,138 +1,121 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <title>Melissa Jones Portfolio</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
-        <link href="styling.css" rel="stylesheet">
-        <link href="mobile.css" rel="stylesheet">
-        <link href="tablet.css" rel="stylesheet">
-        <link href="desktop.css" rel="stylesheet">
-    </head>
-    <body>
-        <header>
-            <h1>Melissa Jones</h1>
-            <nav>
-                <ul>
-                    <li class="btn"><a href="#about-me">About Me</a></li>
-                    <li class="btn"><a href="#projects">Projects</a></li>
-                    <li class="btn"><a href="#skills">Skills</a></li>
-                    <li class="btn"><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        <section id="about-me">
-            <h2 id="about-me-h2">About Me</h2>
-            <div id="about-me-container">
-                <p id="bio">
-                    Hi, I am Melissa and I have been studying programming for about a year and a half. I decided to make a career change so I began taking courses online to build some
-                    knowledge before I came across IT Career Switch and their traineeship program. This is what I am currently completing with the goal of finding work as a junior developer. 
-                </p>
-                <div id="img-container">
-                    <img src="images/melissa-jones.jpg" id="melissa-jones">
-                </div>
-            </div>
-        </section>
-        <section id="projects">
-            <h2>Projects</h2>
-            <p>
-                Below is a list of the projects in my portfolio with a brief description of each. Clicking on any of the project titles will take you to the GitHub repository for that project.
-                Please feel free to take a look at my work at your leisure. 
-            </p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="script.js" defer></script>
+    <title>My Portfolio</title>
+  </head>
+  <body>
+    <header id="home">
+      <nav>
+        <h1 class="logo">My Portfolio</h1>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact-me">Contact Me</a></li>
+        </ul>
+      </nav>
 
-            <div class="project-container">
-                <div class="project-title-container">
-                    <h3>The Witch's Book Nook (Book Club Website)</h3>
-                    <a href="https://github.com/MelissaJones98/responsive-club"><img src="images/git-hub.png" alt="GitHub Logo" class="github-logo"></a>
-                </div>
-                <h4>Description</h4>
-                <p>
-                    As part of a Codecademy course I was tasked to create a website for a club, I chose to create a website for a fictional book club, showcasing skills in responsive web design.
-                </p>
-                <h4>Features</h4>
-                <p>The website contains:</p>
-                <ul>
-                    <li>a home page that greets the user and introduces the book club</li>
-                    <li>a brief history of the club creation and details of the founder</li>
-                    <li>details about upcoming and previous books that the club has read</li>
-                    <li>a schedule of the upcoming club meetings as well as details of the meeting location</li>
-                    <li>a sign up page for people to become members of the book club</li>
-                </ul>
-                <h4>How to Use</h4>
-                <p>Run the index.html file in the browser and navigate the site using the buttons on the nav bar.</p>
-                <h4>Technologies</h4>
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                </ul>
-            </div>
+      <div class="profile">
+        <img src="photo.png" alt="Profile Photo" id="profile-photo" />
+        <div class="profile-text">
+          <h2>Hi, I'm <span>Melissa Jones</span></h2>
+          <h3>Junior Full-Stack Developer</h3>
+        </div>
+      </div>
+    </header>
 
-            <div class="project-container">
-                <div class="project-title-container">
-                    <h3>Magical Message Generator</h3>
-                    <a href="https://github.com/MelissaJones98/mixed-messages"><img src="images/git-hub.png" alt="GitHub Logo" class="github-logo"></a>
-                </div>
-                <h4>Description</h4>
-                <p>
-                    Codecademy Portfolio Project. Message generator program. Every time a user runs the program they will get a new randomised output. 
-                    Upon running the program a unique message will be generated comprised of three different components selected at random from three different arrays.
-                </p>
-                <h4>Features</h4>
-                <ul>
-                    <li>A basic HTML webpage styled using CSS that provides a visual for the message generator program written using JavaScript</li>
-                    <li>Functions which are called using onclick on two different buttons (generate and reset) to generate the messages and reset</li>
-                    <li>The messages are compiled at random by the functions selecting items from three different arrays and concatenating them</li>
-                </ul>
-                <h4>How to Use</h4>
-                <p><strong>Option 1: Node</strong></p>
-                <p class="code">node ./script.js</p>
-                <p><strong>Option 2: HTML</strong></p>
-                <p>Run index.html in the browser</p>
-                <h4>Technologies</h4>
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                </ul>
-            </div>
-            <div class="project-container">
-                <div class="project-title-container">
-                    <h3>Learn Afrikaans Game</h3>
-                    <a href="https://github.com/MelissaJones98/Learn-Afrikaans-Game"><img src="images/git-hub.png" alt="GitHub Logo" class="github-logo"></a>
-                </div>
-                <h4>Description</h4>
-                <p>
-                    A multiple choice language learning game designed to aid someone with learning Afrikaans.
-                </p>
-                <h4>Features</h4>
-                <ul>
-                    <li>A basic HTML webpage styled using CSS to enable the user to play the game</li>
-                    <li>JavaScript functions power the game, interatting through various arrays of questions and confirming if the answer selected is correct</li>
-                    <li><strong>Question sets for the following topics: </strong>numbers, month, greetings, family, days of the week, colours and animals</li>
-                </ul>
-                <h4>How to Use</h4>
-                <p>Run index.html in the browser</p>
-                <h4>Technologies</h4>
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                </ul>
-            </div>
-        </section>
-        <section id="skills">
-            <h2>Skills</h2>
-            <p>Click the button below to reveal the list of programming languages, platforms and tools that I have used so far in my studies.</p>
-            <div id="btn-container">
-                <button id="generate-btn" class="btn">Generate</button>
-            </div>
-            <ul id="skills-list">
-                
-            </ul>
-        </section>
-        <script src="script.js"></script>
-    </body>
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <!--UPDATE FURTHER - general bio about me, mention my creativity that I like creative hobbies and apply this creativity to my coding too-->
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto
+        quaerat minus molestiae omnis similique ex dignissimos harum, facere
+        cupiditate animi! Ipsum, officia facere illum recusandae alias
+        consectetur expedita dolore possimus?
+      </p>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <!--GitHub links until a project is deployed | deploy this website once completed-->
+      <div class="card-container">
+        <div class="card">
+          <h3>Project Name Here</h3>
+          <p>
+            Description of project here. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Sapiente temporibus dicta doloribus iste quia
+            perspiciatis asperiores magnam nam minima dignissimos?
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Project Name Here</h3>
+          <p>
+            Description of project here. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Sapiente temporibus dicta doloribus iste quia
+            perspiciatis asperiores magnam nam minima dignissimos?
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="certs" class="section">
+      <h2>Certificates and Qualifications</h2>
+      <div class="card-container">
+        <div class="card">
+          <h3>Certificate/Qualification Name Here</h3>
+          <p>
+            Description of certificate/qualification here. Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Sapiente temporibus dicta
+            doloribus iste quia perspiciatis asperiores magnam nam minima
+            dignissimos?
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Certificate/Qualification Name Here</h3>
+          <p>
+            Description of certificate/qualification here. Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Sapiente temporibus dicta
+            doloribus iste quia perspiciatis asperiores magnam nam minima
+            dignissimos?
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact-me" class="section">
+      <h2>Contact Me</h2>
+      <form action="" id="contactForm">
+        <label for="name">Name: </label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Your Name"
+          required
+        />
+
+        <label for="email">Email: </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Your Email"
+          required
+        />
+
+        <label for="message">Message: </label>
+        <textarea name="message" id="message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+    <footer>
+      <p>&copy; 2026 Melissa Jones</p>
+    </footer>
+  </body>
 </html>
