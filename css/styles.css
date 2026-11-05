@@ -4,6 +4,7 @@
   --icewhite: #f8fafc;
   --navyGrey: oklch(31.885% 0.0517 264.07);
   --electricBlue: #3b82f6;
+  --blueGrey: oklch(40.255% 0.07324 265.283);
 }
 
 * {
@@ -105,13 +106,121 @@ nav {
   justify-content: center;
   gap: 30px;
   margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.project-carousel {
+  display: grid;
+  /* minmax(0, 1fr) lets the middle column shrink, so the row of cards scrolls instead of stretching the page */
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.project-card-container {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* the arrows replace the scrollbar */
+}
+
+.carousel-arrow {
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--blueGrey);
+  color: var(--icewhite);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+/* only on devices with a real pointer, otherwise a tapped arrow stays blue on touchscreens */
+@media (hover: hover) {
+  .carousel-arrow:hover {
+    background-color: var(--electricBlue);
+  }
+}
+
+/* the triangle is an empty box cut to shape by clip-path, and currentColor picks up the button's color */
+.carousel-arrow::before {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 18px;
+  margin: auto;
+  background-color: currentColor;
+}
+
+/* the 2px nudges make each triangle look centred, as most of its visual weight is at the wide end */
+#projects-prev::before {
+  clip-path: polygon(100% 0, 100% 100%, 0 50%);
+  transform: translateX(-2px);
+}
+
+#projects-next::before {
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+  transform: translateX(2px);
+}
+
+/* only animate the scrolling for visitors who haven't asked for reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+  .project-card-container {
+    scroll-behavior: smooth;
+  }
+}
+
+/* on small screens the arrows move below the cards so the cards keep their width */
+@media (max-width: 600px) {
+  .project-carousel {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .project-card-container {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  #projects-prev {
+    justify-self: end;
+  }
+}
+
+.cert-card,
+.project-card {
+  background-color: var(--blueGrey);
+  padding: 20px 25px;
+  border-radius: 1rem;
 }
 
 .cert-card {
-  background-color: oklch(40.255% 0.07324 265.283);
-  padding: 20px 25px;
-  border-radius: 1rem;
   text-align: center;
+}
+
+.project-card {
+  flex: 0 0 100%; /* each card fills the row, so only one shows at a time */
+  height: 600px;
+  overflow-y: auto; /* long projects scroll inside their card */
+  scroll-snap-align: start;
+  scrollbar-width: thin;
+}
+
+.project-card h3 {
+  text-align: center;
+}
+
+/* the CSS reset removes list padding, this restores the indent for nested lists */
+.project-card ul {
+  padding-left: 20px;
+}
+
+/* the CSS reset also removes table cell padding, so the columns need spacing added back */
+.project-card th,
+.project-card td {
+  padding: 4px 10px;
 }
 
 .cert-date {
@@ -125,7 +234,8 @@ nav {
   max-height: 300px;
 }
 
-#cert-heading {
+#cert-heading,
+#projects-heading {
   margin-top: 10px;
 }
 

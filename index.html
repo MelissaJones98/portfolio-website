@@ -62,575 +62,613 @@
     </section>
 
     <section id="projects" class="section">
-      <h2>Projects</h2>
-      <!--GitHub links until a project is deployed | deploy this website once completed-->
-      <div class="project-card-container">
-        <div class="project-card" id="book-club">
-          <h3>
-            <a
-              href="https://github.com/MelissaJones98/responsive-club/tree/main"
-              >The Witch's Book Nook - Book Club Website</a
-            >
-          </h3>
-          <h4>Description</h4>
-          <p>
-            As part of a Codecademy course I was tasked to create a website for
-            a club, I chose to create a website for a fictional book club,
-            showcasing skills in responsive web design. The club, its members
-            and its meet ups are all made up.
-          </p>
+      <div class="section-card">
+        <h2 id="projects-heading">Projects</h2>
+        <!--GitHub links until a project is deployed | deploy this website once completed-->
+        <div class="project-carousel">
+          <!--add screenshots from each project so it isn't all just text-->
+          <button
+            type="button"
+            class="carousel-arrow"
+            id="projects-prev"
+            aria-label="Previous project"
+          ></button>
+          <div
+            class="project-card-container"
+            id="projects-scroller"
+            tabindex="0"
+            role="region"
+            aria-label="Project cards"
+          >
+            <div class="project-card" id="book-club">
+              <h3>
+                <a
+                  href="https://github.com/MelissaJones98/responsive-club/tree/main"
+                  >The Witch's Book Nook - Book Club Website</a
+                >
+              </h3>
+              <h4>Description</h4>
+              <p>
+                As part of a Codecademy course I was tasked to create a website
+                for a club, I chose to create a website for a fictional book
+                club, showcasing skills in responsive web design. The club, its
+                members and its meet ups are all made up.
+              </p>
 
-          <h4>Features</h4>
-          <p>The website contains five pages:</p>
-          <ul>
-            <li>
-              <strong>Home:</strong> greets the user and introduces the book
-              club
-            </li>
-            <li>
-              <strong>About Us:</strong> a brief history of the club's creation
-              and details of the founder
-            </li>
-            <li>
-              <strong>Books:</strong> the upcoming book and 16 past books, with
-              cover art, descriptions and club ratings for the past books
-            </li>
-            <li>
-              <strong>Meet Ups:</strong> a schedule of club meetings, plus the
-              meeting address and a map
-            </li>
-            <li>
-              <strong>Join Us:</strong> a sign up form for people to become
-              members of the book club
-            </li>
-          </ul>
-          <p>
-            The Join Us form is front-end only. It has no back end, so submitted
-            details are not saved or sent anywhere.
-          </p>
-
-          <h4>Responsive Design</h4>
-          <p>
-            The layout is built with CSS media queries, using no CSS frameworks:
-          </p>
-          <table>
-            <tr>
-              <th>Layout</th>
-              <th>Screen Width</th>
-              <th>Stylesheet</th>
-            </tr>
-            <tr>
-              <td>Mobile</td>
-              <td>320px to 425px</td>
-              <td><span class="code">mobile.css</span></td>
-            </tr>
-            <tr>
-              <td>Tablet</td>
-              <td>426px to 1023px</td>
-              <td><span class="code">tablet.css</span></td>
-            </tr>
-            <tr>
-              <td>Desktop</td>
-              <td>1024px and above</td>
-              <td><span class="code">desktop.css</span></td>
-            </tr>
-          </table>
-          <p>
-            <span class="code">desktop.css</span> also has extra adjustments for
-            larger screens from 1440px.
-            <span class="code">general.css</span> holds styles shared across
-            layouts, including the form styling used by both tablet and desktop.
-          </p>
-
-          <h4>Technologies</h4>
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-          </ul>
-        </div>
-
-        <div class="project-card" id="recipe-book">
-          <h3>
-            <a href="https://github.com/MelissaJones98/online-recipe-book"
-              >Online Recipe Book</a
-            >
-          </h3>
-          <h4>Description</h4>
-          <p>
-            The mini project from the HTML, CSS and JavaScript course run by IT
-            Career Switch.
-          </p>
-
-          <h4>Technologies</h4>
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-          </ul>
-        </div>
-
-        <div class="project-card" id="boxy">
-          <h3>
-            <a href="https://github.com/MelissaJones98/Boxy">Boxy</a>
-          </h3>
-          <h4>Description</h4>
-          <p>
-            A web app where you can create boxes/containers and record items
-            that are contained inside, take pictures and attach them to each
-            item, make them transferable or lock them in that container. The
-            final PERN project for my Full-Stack Engineer course from
-            Codecademy. I plan to use a mobile-first, TDD approach to building
-            this project.
-          </p>
-
-          <h4>Features</h4>
-          <ul>
-            <li>Create boxes/containers</li>
-            <li>Record the items contained within each box/container</li>
-            <li>Optionally attach photos to each listed item</li>
-            <li>Transfer items between boxes</li>
-            <li>Delete items from boxes</li>
-            <li>
-              Lock and unlock containers (locked containers cannot be edited)
-            </li>
-          </ul>
-
-          <h4>Technologies</h4>
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-          </ul>
-        </div>
-
-        <div class="project-card" id="melsymart">
-          <h3>
-            <a href="https://github.com/MelissaJones98/E-Commerce-App"
-              >MelsyMart</a
-            >
-          </h3>
-          <h4>Description</h4>
-          <p>
-            A full-stack e-commerce application built with PostgreSQL, Express,
-            React and Node.js (PERN). It has a REST API and a React front end,
-            and lets customers register an account, browse products and complete
-            a purchase.
-          </p>
-
-          <h4>Features</h4>
-          <ul>
-            <li>
-              Allow users to register and log in via the API
-              <ul>
-                <li>Enable users to create a personal account</li>
-                <li>
-                  Enable users to create an account with a third-party service
-                  (Google, Facebook, etc)
-                </li>
-              </ul>
-            </li>
-            <li>
-              Allow CRUD operations on:
-              <ul>
-                <li>products</li>
-                <li>user accounts</li>
-                <li>user carts</li>
-                <li>orders</li>
-              </ul>
-            </li>
-            <li>Enable users to browse products</li>
-            <li>
-              Allow users to place orders
+              <h4>Features</h4>
+              <p>The website contains five pages:</p>
               <ul>
                 <li>
-                  Enable users to complete a purchase using Stripe, the payment
-                  processor
+                  <strong>Home:</strong> greets the user and introduces the book
+                  club
+                </li>
+                <li>
+                  <strong>About Us:</strong> a brief history of the club's
+                  creation and details of the founder
+                </li>
+                <li>
+                  <strong>Books:</strong> the upcoming book and 16 past books,
+                  with cover art, descriptions and club ratings for the past
+                  books
+                </li>
+                <li>
+                  <strong>Meet Ups:</strong> a schedule of club meetings, plus
+                  the meeting address and a map
+                </li>
+                <li>
+                  <strong>Join Us:</strong> a sign up form for people to become
+                  members of the book club
                 </li>
               </ul>
-            </li>
-            <li>Documented API using Swagger</li>
-            <li>Enable users to view order history</li>
-          </ul>
+              <p>
+                The Join Us form is front-end only. It has no back end, so
+                submitted details are not saved or sent anywhere.
+              </p>
 
-          <h4>Technologies</h4>
-          <ul>
-            <li>JavaScript</li>
-            <li>Git and GitHub</li>
-            <li>Command Line</li>
-            <li>Express</li>
-            <li>PostgreSQL</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>React</li>
-            <li>React Router</li>
-            <li>bcrypt</li>
-            <li>Passport.js</li>
-            <li>Node.js</li>
-            <li>Jest</li>
-            <li>React Testing Library</li>
-            <li>Postman</li>
-            <li>Newman</li>
-            <li>Swagger UI</li>
-            <li>OpenAPI</li>
-            <li>Stripe</li>
-          </ul>
-        </div>
+              <h4>Responsive Design</h4>
+              <p>
+                The layout is built with CSS media queries, using no CSS
+                frameworks:
+              </p>
+              <table>
+                <tr>
+                  <th>Layout</th>
+                  <th>Screen Width</th>
+                  <th>Stylesheet</th>
+                </tr>
+                <tr>
+                  <td>Mobile</td>
+                  <td>320px to 425px</td>
+                  <td><span class="code">mobile.css</span></td>
+                </tr>
+                <tr>
+                  <td>Tablet</td>
+                  <td>426px to 1023px</td>
+                  <td><span class="code">tablet.css</span></td>
+                </tr>
+                <tr>
+                  <td>Desktop</td>
+                  <td>1024px and above</td>
+                  <td><span class="code">desktop.css</span></td>
+                </tr>
+              </table>
+              <p>
+                <span class="code">desktop.css</span> also has extra adjustments
+                for larger screens from 1440px.
+                <span class="code">general.css</span> holds styles shared across
+                layouts, including the form styling used by both tablet and
+                desktop.
+              </p>
 
-        <div class="project-card" id="jammming">
-          <h3>
-            <a href="https://github.com/MelissaJones98/Jammming">Jammming</a>
-          </h3>
-          <h4>Description</h4>
-          <p>
-            A React web application called Jammming. Using my knowledge of React
-            components, passing state, and requests with the Spotify API I built
-            a website that allows users to search the Spotify library, create a
-            custom playlist, then save it to their Spotify account.
-          </p>
+              <h4>Technologies</h4>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
+            </div>
 
-          <h4>Features</h4>
-          <ul>
-            <li>
-              Users can search for songs by song title, artist's name and genre
-            </li>
-            <li>
-              Users can see information about each song such as; title, artist,
-              and album for songs they queried
-            </li>
-            <li>
-              Users can export their custom playlist to their personal Spotify
-              account
-            </li>
-          </ul>
+            <div class="project-card" id="recipe-book">
+              <h3>
+                <a href="https://github.com/MelissaJones98/online-recipe-book"
+                  >Online Recipe Book</a
+                >
+              </h3>
+              <h4>Description</h4>
+              <p>
+                The mini project from the HTML, CSS and JavaScript course run by
+                IT Career Switch.
+              </p>
 
-          <h4>Technologies</h4>
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>HTTP Requests and Responses</li>
-            <li>Authentication</li>
-          </ul>
-        </div>
+              <h4>Technologies</h4>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
+            </div>
 
-        <div class="project-card" id="weather-app">
-          <h3>
-            <a href="https://github.com/MelissaJones98/weather-app"
-              >Weather Checker</a
-            >
-          </h3>
-          <h4>Description</h4>
-          <p>
-            A small web app that shows the current weather for any city. Type a
-            city name, click Get weather, and the app shows the temperature
-            (°C), a short description and a weather icon. The data comes from
-            the OpenWeather Current Weather API. Built with plain HTML, CSS and
-            JavaScript. Vite runs the development server and loads the API key
-            from a <span class="code">.env</span> file.
-          </p>
+            <div class="project-card" id="boxy">
+              <h3>
+                <a href="https://github.com/MelissaJones98/Boxy">Boxy</a>
+              </h3>
+              <h4>Description</h4>
+              <p>
+                A web app where you can create boxes/containers and record items
+                that are contained inside, take pictures and attach them to each
+                item, make them transferable or lock them in that container. The
+                final PERN project for my Full-Stack Engineer course from
+                Codecademy. I plan to use a mobile-first, TDD approach to
+                building this project.
+              </p>
 
-          <h4>Technologies</h4>
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-          </ul>
-        </div>
+              <h4>Features</h4>
+              <ul>
+                <li>Create boxes/containers</li>
+                <li>Record the items contained within each box/container</li>
+                <li>Optionally attach photos to each listed item</li>
+                <li>Transfer items between boxes</li>
+                <li>Delete items from boxes</li>
+                <li>
+                  Lock and unlock containers (locked containers cannot be
+                  edited)
+                </li>
+              </ul>
 
-        <div class="project-card" id="rock-paper-scissors">
-          <h3>
-            <a href="https://github.com/MelissaJones98/rock-paper-scissors-game"
-              >Rock, Paper, Scissors Game</a
-            >
-          </h3>
-          <h4>Description</h4>
-          <p>
-            A simple browser-based Rock Paper Scissors game built with HTML, CSS
-            and vanilla JavaScript.
-          </p>
+              <h4>Technologies</h4>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+            </div>
 
-          <h4>Technologies</h4>
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-          </ul>
-        </div>
+            <div class="project-card" id="melsymart">
+              <h3>
+                <a href="https://github.com/MelissaJones98/E-Commerce-App"
+                  >MelsyMart</a
+                >
+              </h3>
+              <h4>Description</h4>
+              <p>
+                A full-stack e-commerce application built with PostgreSQL,
+                Express, React and Node.js (PERN). It has a REST API and a React
+                front end, and lets customers register an account, browse
+                products and complete a purchase.
+              </p>
 
-        <div class="project-card" id="reddit-app">
-          <h3>
-            <a href="https://github.com/MelissaJones98/reddit-app"
-              >Reddit Clone</a
-            >
-          </h3>
-          <h4>Description</h4>
-          <p>
-            A Reddit clone application using React and Redux. The application
-            will allow users to view and search posts and comments provided by
-            its own API (Node.js, Express and PostgreSQL). Please note that
-            credit for any branding and the logo goes to Reddit.
-          </p>
+              <h4>Features</h4>
+              <ul>
+                <li>
+                  Allow users to register and log in via the API
+                  <ul>
+                    <li>Enable users to create a personal account</li>
+                    <li>
+                      Enable users to create an account with a third-party
+                      service (Google, Facebook, etc)
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  Allow CRUD operations on:
+                  <ul>
+                    <li>products</li>
+                    <li>user accounts</li>
+                    <li>user carts</li>
+                    <li>orders</li>
+                  </ul>
+                </li>
+                <li>Enable users to browse products</li>
+                <li>
+                  Allow users to place orders
+                  <ul>
+                    <li>
+                      Enable users to complete a purchase using Stripe, the
+                      payment processor
+                    </li>
+                  </ul>
+                </li>
+                <li>Documented API using Swagger</li>
+                <li>Enable users to view order history</li>
+              </ul>
 
-          <p>
-            There is a big constraint with using the Reddit API for this
-            project. Reddit's Data API now requires developers to formally
-            request non-commercial access (which requires a support ticket, not
-            instant signup) before the developer is approved to use it.
-          </p>
+              <h4>Technologies</h4>
+              <ul>
+                <li>JavaScript</li>
+                <li>Git and GitHub</li>
+                <li>Command Line</li>
+                <li>Express</li>
+                <li>PostgreSQL</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>React</li>
+                <li>React Router</li>
+                <li>bcrypt</li>
+                <li>Passport.js</li>
+                <li>Node.js</li>
+                <li>Jest</li>
+                <li>React Testing Library</li>
+                <li>Postman</li>
+                <li>Newman</li>
+                <li>Swagger UI</li>
+                <li>OpenAPI</li>
+                <li>Stripe</li>
+              </ul>
+            </div>
 
-          <p>
-            As this project is designed entirely to be a learning/portfolio
-            project I have decided to go an alternative route to complete this
-            project and make it fully functional. After carrying out some
-            research I decided to create my own databases and build a real
-            full-stack app. This means my forms will need to do genuine
-            authentication.
-          </p>
+            <div class="project-card" id="jammming">
+              <h3>
+                <a href="https://github.com/MelissaJones98/Jammming"
+                  >Jammming</a
+                >
+              </h3>
+              <h4>Description</h4>
+              <p>
+                A React web application called Jammming. Using my knowledge of
+                React components, passing state, and requests with the Spotify
+                API I built a website that allows users to search the Spotify
+                library, create a custom playlist, then save it to their Spotify
+                account.
+              </p>
 
-          <h4>Features</h4>
-          <ul>
-            <li>
-              Users can use the application on any device (desktop to mobile)
-            </li>
-            <li>Users can use the application on any modern browser</li>
-            <li>Users can access your application at a URL</li>
-            <li>
-              Users see an initial view of the data when first visiting the app
-            </li>
-            <li>Users can search the data using terms</li>
-            <li>
-              Users can filter the data based on categories that are predefined
-            </li>
-            <li>
-              Users are shown a detailed view (modal or new page/route) when
-              they select an item
-            </li>
-            <li>Users are delighted with a cohesive design system</li>
-            <li>Users are delighted with animations and transitions</li>
-            <li>Users are able to leave an error state</li>
-          </ul>
+              <h4>Features</h4>
+              <ul>
+                <li>
+                  Users can search for songs by song title, artist's name and
+                  genre
+                </li>
+                <li>
+                  Users can see information about each song such as; title,
+                  artist, and album for songs they queried
+                </li>
+                <li>
+                  Users can export their custom playlist to their personal
+                  Spotify account
+                </li>
+              </ul>
 
-          <h4>Technologies</h4>
-          <ul>
-            <li>React</li>
-            <li>Redux</li>
-            <li>Git/GitHub</li>
-            <li>GitHub Projects</li>
-            <li>Node.js</li>
-            <li>Express</li>
-            <li>SQL (PostgreSQL, MySQL)</li>
-            <li>JWT token</li>
-            <li>bcrypt (password hashing)</li>
-            <li>React Router</li>
-            <li>React Testing Library</li>
-            <li>Supertest (backend API tests)</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Jest</li>
-            <li>Selenium</li>
-            <li>Command line and file navigation</li>
-          </ul>
-        </div>
+              <h4>Technologies</h4>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>HTTP Requests and Responses</li>
+                <li>Authentication</li>
+              </ul>
+            </div>
 
-        <div class="project-card" id="learn-afr">
-          <h3>
-            <a href="https://github.com/MelissaJones98/Learn-Afrikaans-Game"
-              >Learn Afrikaans Game</a
-            >
-          </h3>
-          <h4>Description</h4>
-          <p>
-            A browser-based multiple-choice quiz for learning Afrikaans
-            vocabulary. Pick a topic, read the Afrikaans word, and choose its
-            English meaning from four options. It's written in plain HTML, CSS
-            and JavaScript, with no frameworks or build step.
-          </p>
+            <div class="project-card" id="weather-app">
+              <h3>
+                <a href="https://github.com/MelissaJones98/weather-app"
+                  >Weather Checker</a
+                >
+              </h3>
+              <h4>Description</h4>
+              <p>
+                A small web app that shows the current weather for any city.
+                Type a city name, click Get weather, and the app shows the
+                temperature (°C), a short description and a weather icon. The
+                data comes from the OpenWeather Current Weather API. Built with
+                plain HTML, CSS and JavaScript. Vite runs the development server
+                and loads the API key from a
+                <span class="code">.env</span> file.
+              </p>
 
-          <h4>Features</h4>
-          <ul>
-            <li>151 words across 7 question sets</li>
-            <li>
-              Instant feedback, including the correct answer when you get one
-              wrong
-            </li>
-            <li>A running score</li>
-            <li>Questions shuffled each time a quiz page loads</li>
-            <li>A Home button on every quiz page for switching topics</li>
-          </ul>
+              <h4>Technologies</h4>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+            </div>
 
-          <h4>Technologies</h4>
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-          </ul>
-        </div>
+            <div class="project-card" id="rock-paper-scissors">
+              <h3>
+                <a
+                  href="https://github.com/MelissaJones98/rock-paper-scissors-game"
+                  >Rock, Paper, Scissors Game</a
+                >
+              </h3>
+              <h4>Description</h4>
+              <p>
+                A simple browser-based Rock Paper Scissors game built with HTML,
+                CSS and vanilla JavaScript.
+              </p>
 
-        <div class="project-card" id="text-based-game">
-          <h3>
-            <a href="https://github.com/MelissaJones98/Text-based-Game"
-              >Text Based Game</a
-            >
-          </h3>
-          <h4>Description</h4>
-          <p>
-            First attempt at a text based game using HTML, CSS and JavaScript.
-          </p>
+              <h4>Technologies</h4>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+            </div>
 
-          <h4>Technologies</h4>
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-          </ul>
-        </div>
+            <div class="project-card" id="reddit-app">
+              <h3>
+                <a href="https://github.com/MelissaJones98/reddit-app"
+                  >Reddit Clone</a
+                >
+              </h3>
+              <h4>Description</h4>
+              <p>
+                A Reddit clone application using React and Redux. The
+                application will allow users to view and search posts and
+                comments provided by its own API (Node.js, Express and
+                PostgreSQL). Please note that credit for any branding and the
+                logo goes to Reddit.
+              </p>
 
-        <div class="project-card" id="to-do">
-          <h3>
-            <a href="https://github.com/MelissaJones98/To-Do-List"
-              >To Do List</a
-            >
-          </h3>
-          <h4>Description</h4>
-          <p>
-            A Codecademy off-platform project. A simple to do list web
-            application leveraging the MVC architecture. This web application
-            allows users to add a new task to their to do list. Users will be
-            able to remove tasks from the list once they have been completed by
-            clicking on the list item.
-          </p>
+              <p>
+                There is a big constraint with using the Reddit API for this
+                project. Reddit's Data API now requires developers to formally
+                request non-commercial access (which requires a support ticket,
+                not instant signup) before the developer is approved to use it.
+              </p>
 
-          <h4>Technologies</h4>
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>REST API</li>
-            <li>Express</li>
-            <li>Command Line</li>
-          </ul>
-        </div>
+              <p>
+                As this project is designed entirely to be a learning/portfolio
+                project I have decided to go an alternative route to complete
+                this project and make it fully functional. After carrying out
+                some research I decided to create my own databases and build a
+                real full-stack app. This means my forms will need to do genuine
+                authentication.
+              </p>
 
-        <div class="project-card" id="magic-messages">
-          <h3>
-            <a href="https://github.com/MelissaJones98/mixed-messages"
-              >Magical Message Generator</a
-            >
-          </h3>
-          <h4>Description</h4>
-          <p>
-            Codecademy Portfolio Project. Message generator program. Every time
-            a user runs the program they will get a new randomised output. Upon
-            running the program a unique message will be generated comprised of
-            three different components selected at random from three different
-            arrays.
-          </p>
+              <h4>Features</h4>
+              <ul>
+                <li>
+                  Users can use the application on any device (desktop to
+                  mobile)
+                </li>
+                <li>Users can use the application on any modern browser</li>
+                <li>Users can access your application at a URL</li>
+                <li>
+                  Users see an initial view of the data when first visiting the
+                  app
+                </li>
+                <li>Users can search the data using terms</li>
+                <li>
+                  Users can filter the data based on categories that are
+                  predefined
+                </li>
+                <li>
+                  Users are shown a detailed view (modal or new page/route) when
+                  they select an item
+                </li>
+                <li>Users are delighted with a cohesive design system</li>
+                <li>Users are delighted with animations and transitions</li>
+                <li>Users are able to leave an error state</li>
+              </ul>
 
-          <h4>Features</h4>
-          <ul>
-            <li>
-              A basic HTML webpage styled using CSS that provides a visual for
-              the message generator program written using JavaScript
-            </li>
-            <li>
-              Functions which are called using onclick on two different buttons
-              (generate and reset) to generate the messages and reset
-            </li>
-            <li>
-              The messages are compiled at random by the functions selecting
-              items from three different arrays and concatenating them
-            </li>
-          </ul>
+              <h4>Technologies</h4>
+              <ul>
+                <li>React</li>
+                <li>Redux</li>
+                <li>Git/GitHub</li>
+                <li>GitHub Projects</li>
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>SQL (PostgreSQL, MySQL)</li>
+                <li>JWT token</li>
+                <li>bcrypt (password hashing)</li>
+                <li>React Router</li>
+                <li>React Testing Library</li>
+                <li>Supertest (backend API tests)</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Jest</li>
+                <li>Selenium</li>
+                <li>Command line and file navigation</li>
+              </ul>
+            </div>
 
-          <h4>Technologies</h4>
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-          </ul>
-        </div>
+            <div class="project-card" id="learn-afr">
+              <h3>
+                <a href="https://github.com/MelissaJones98/Learn-Afrikaans-Game"
+                  >Learn Afrikaans Game</a
+                >
+              </h3>
+              <h4>Description</h4>
+              <p>
+                A browser-based multiple-choice quiz for learning Afrikaans
+                vocabulary. Pick a topic, read the Afrikaans word, and choose
+                its English meaning from four options. It's written in plain
+                HTML, CSS and JavaScript, with no frameworks or build step.
+              </p>
 
-        <div class="project-card" id="restaurants">
-          <h3>
-            <a href="https://github.com/MelissaJones98/RESTful-Restaurants"
-              >RESTful Restaurants</a
-            >
-          </h3>
-          <h4>Description</h4>
-          <p>
-            A Codecademy off-platform project where you build an API to connect
-            the front-end and back-end of a restaurant review site. The site
-            allows its users to view a list of saved restaurants, add to that
-            list, star their favourite restaurants, and leave comments about
-            these places. Codecademy provide starter code which contains the
-            built front-end and sets up some of the API routes that are
-            required. This project adds the remaining routes needed to handle
-            starred restaurants and comments.
-          </p>
-          <ul>
-            <li>
-              <strong>Backend:</strong> Node.js + Express REST API (<span
-                class="code"
-                >backend/</span
-              >)
-            </li>
-            <li>
-              <strong>Frontend:</strong> React, created with Create React App
-              (<span class="code">frontend/</span>)
-            </li>
-          </ul>
+              <h4>Features</h4>
+              <ul>
+                <li>151 words across 7 question sets</li>
+                <li>
+                  Instant feedback, including the correct answer when you get
+                  one wrong
+                </li>
+                <li>A running score</li>
+                <li>Questions shuffled each time a quiz page loads</li>
+                <li>A Home button on every quiz page for switching topics</li>
+              </ul>
 
-          <h4>Features</h4>
-          <ul>
-            <li>View a list of saved restaurants</li>
-            <li>Add new restaurants to the list</li>
-            <li>Star favourite restaurants</li>
-            <li>Leave comments about restaurants</li>
-          </ul>
+              <h4>Technologies</h4>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+            </div>
 
-          <h4>Technologies</h4>
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>Node.js</li>
-            <li>Express</li>
-          </ul>
-        </div>
+            <div class="project-card" id="text-based-game">
+              <h3>
+                <a href="https://github.com/MelissaJones98/Text-based-Game"
+                  >Text Based Game</a
+                >
+              </h3>
+              <h4>Description</h4>
+              <p>
+                First attempt at a text based game using HTML, CSS and
+                JavaScript.
+              </p>
 
-        <div class="project-card" id="bank">
-          <h3>
-            <a href="https://github.com/MelissaJones98/Securing-Acme-Bank"
-              >Securing Acme Bank</a
-            >
-          </h3>
-          <h4>Description</h4>
-          <p>
-            A Codecademy project to find and fix security vulnerabilities in
-            Acme Bank, a deliberately insecure Node.js/Express banking app.
-            Users can log in, transfer money, download their records, view a
-            public ledger and post on a public forum. The original app (<span
-              class="code"
-              >app.js</span
-            >) was open to cross-site scripting (XSS), SQL injection, cross-site
-            request forgery (CSRF) and session theft. This project secured it
-            across six tickets, each tested by attacking the running app before
-            and after the fix.
-          </p>
+              <h4>Technologies</h4>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+            </div>
 
-          <h4>Technologies</h4>
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>EJS</li>
-            <li>SQLite</li>
-            <li>Node.js</li>
-            <li>Express</li>
-            <li>Helmet</li>
-          </ul>
+            <div class="project-card" id="to-do">
+              <h3>
+                <a href="https://github.com/MelissaJones98/To-Do-List"
+                  >To Do List</a
+                >
+              </h3>
+              <h4>Description</h4>
+              <p>
+                A Codecademy off-platform project. A simple to do list web
+                application leveraging the MVC architecture. This web
+                application allows users to add a new task to their to do list.
+                Users will be able to remove tasks from the list once they have
+                been completed by clicking on the list item.
+              </p>
+
+              <h4>Technologies</h4>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>REST API</li>
+                <li>Express</li>
+                <li>Command Line</li>
+              </ul>
+            </div>
+
+            <div class="project-card" id="magic-messages">
+              <h3>
+                <a href="https://github.com/MelissaJones98/mixed-messages"
+                  >Magical Message Generator</a
+                >
+              </h3>
+              <h4>Description</h4>
+              <p>
+                Codecademy Portfolio Project. Message generator program. Every
+                time a user runs the program they will get a new randomised
+                output. Upon running the program a unique message will be
+                generated comprised of three different components selected at
+                random from three different arrays.
+              </p>
+
+              <h4>Features</h4>
+              <ul>
+                <li>
+                  A basic HTML webpage styled using CSS that provides a visual
+                  for the message generator program written using JavaScript
+                </li>
+                <li>
+                  Functions which are called using onclick on two different
+                  buttons (generate and reset) to generate the messages and
+                  reset
+                </li>
+                <li>
+                  The messages are compiled at random by the functions selecting
+                  items from three different arrays and concatenating them
+                </li>
+              </ul>
+
+              <h4>Technologies</h4>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+            </div>
+
+            <div class="project-card" id="restaurants">
+              <h3>
+                <a href="https://github.com/MelissaJones98/RESTful-Restaurants"
+                  >RESTful Restaurants</a
+                >
+              </h3>
+              <h4>Description</h4>
+              <p>
+                A Codecademy off-platform project where you build an API to
+                connect the front-end and back-end of a restaurant review site.
+                The site allows its users to view a list of saved restaurants,
+                add to that list, star their favourite restaurants, and leave
+                comments about these places. Codecademy provide starter code
+                which contains the built front-end and sets up some of the API
+                routes that are required. This project adds the remaining routes
+                needed to handle starred restaurants and comments.
+              </p>
+              <ul>
+                <li>
+                  <strong>Backend:</strong> Node.js + Express REST API (<span
+                    class="code"
+                    >backend/</span
+                  >)
+                </li>
+                <li>
+                  <strong>Frontend:</strong> React, created with Create React
+                  App (<span class="code">frontend/</span>)
+                </li>
+              </ul>
+
+              <h4>Features</h4>
+              <ul>
+                <li>View a list of saved restaurants</li>
+                <li>Add new restaurants to the list</li>
+                <li>Star favourite restaurants</li>
+                <li>Leave comments about restaurants</li>
+              </ul>
+
+              <h4>Technologies</h4>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>Express</li>
+              </ul>
+            </div>
+
+            <div class="project-card" id="bank">
+              <h3>
+                <a href="https://github.com/MelissaJones98/Securing-Acme-Bank"
+                  >Securing Acme Bank</a
+                >
+              </h3>
+              <h4>Description</h4>
+              <p>
+                A Codecademy project to find and fix security vulnerabilities in
+                Acme Bank, a deliberately insecure Node.js/Express banking app.
+                Users can log in, transfer money, download their records, view a
+                public ledger and post on a public forum. The original app
+                (<span class="code">app.js</span>) was open to cross-site
+                scripting (XSS), SQL injection, cross-site request forgery
+                (CSRF) and session theft. This project secured it across six
+                tickets, each tested by attacking the running app before and
+                after the fix.
+              </p>
+
+              <h4>Technologies</h4>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>EJS</li>
+                <li>SQLite</li>
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>Helmet</li>
+              </ul>
+            </div>
+          </div>
+          <button
+            type="button"
+            class="carousel-arrow"
+            id="projects-next"
+            aria-label="Next project"
+          ></button>
         </div>
       </div>
     </section>
