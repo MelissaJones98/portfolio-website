@@ -65,17 +65,15 @@
       <div class="section-card">
         <h2 id="projects-heading">Projects</h2>
         <!--GitHub links until a project is deployed | deploy this website once completed-->
-        <div class="project-carousel">
+        <div class="carousel">
           <!--add screenshots from each project so it isn't all just text-->
           <button
             type="button"
-            class="carousel-arrow"
-            id="projects-prev"
+            class="carousel-arrow carousel-prev"
             aria-label="Previous project"
           ></button>
           <div
-            class="project-card-container"
-            id="projects-scroller"
+            class="carousel-track"
             tabindex="0"
             role="region"
             aria-label="Project cards"
@@ -661,8 +659,7 @@
           </div>
           <button
             type="button"
-            class="carousel-arrow"
-            id="projects-next"
+            class="carousel-arrow carousel-next"
             aria-label="Next project"
           ></button>
         </div>
@@ -672,174 +669,204 @@
     <section id="certs" class="section">
       <div class="section-card">
         <h2 id="cert-heading">Certificates and Qualifications</h2>
-        <div class="cert-card-container">
-          <div class="cert-card">
-            <!--Full-Stack Engineer-->
-            <h3>Full-Stack Engineer</h3>
-            <h4>Codecademy</h4>
-            <p class="cert-date">
-              <strong>Completed: </strong>18th September 2026
-            </p>
-            <img
-              src="certificates/cc-fulls-stack-engineer.png"
-              alt="Full-Stack Engineer Certificate"
-              class="cert"
-            />
+        <div class="carousel">
+          <button
+            type="button"
+            class="carousel-arrow carousel-prev"
+            aria-label="Previous certificate"
+          ></button>
+          <div
+            class="carousel-track"
+            tabindex="0"
+            role="region"
+            aria-label="Certificate cards"
+          >
+            <div class="cert-card">
+              <!--Full-Stack Engineer-->
+              <h3>HTML, CSS, and JavaScript</h3>
+              <h4>IT Career Switch</h4>
+              <p class="cert-date">
+                <strong>Completed: </strong>5th November 2026
+              </p>
+              <img
+                src="certificates/itcs-html-css-js.png"
+                alt="HTML, CSS, and JavaScript Certificate"
+                class="cert"
+              />
+            </div>
+            <div class="cert-card">
+              <!--Full-Stack Engineer-->
+              <h3>Full-Stack Engineer</h3>
+              <h4>Codecademy</h4>
+              <p class="cert-date">
+                <strong>Completed: </strong>18th September 2026
+              </p>
+              <img
+                src="certificates/cc-fulls-stack-engineer.png"
+                alt="Full-Stack Engineer Certificate"
+                class="cert"
+              />
+            </div>
+            <div class="cert-card">
+              <!--Node.js-->
+              <h3>Learn Node.js</h3>
+              <h4>Codecademy</h4>
+              <p class="cert-date">
+                <strong>Completed: </strong>23rd September 2026
+              </p>
+              <img
+                src="certificates/cc-nodejs.png"
+                alt="Learn Node.js Certificate"
+                class="cert"
+              />
+            </div>
+            <div class="cert-card">
+              <!--Interactive Websites-->
+              <h3>Building Interactive JavaScript Websites</h3>
+              <h4>Codecademy</h4>
+              <p class="cert-date"><strong>Completed: </strong>21st May 2026</p>
+              <img
+                src="certificates/cc-interactive-websites.png"
+                alt="Building Interactive JavaScript Websites Certificate"
+                class="cert"
+              />
+            </div>
+            <div class="cert-card">
+              <!--Intro to Python-->
+              <h3>Introduction to Python</h3>
+              <h4>IT Career Switch</h4>
+              <p class="cert-date">
+                <strong>Completed: </strong>12th February 2026
+              </p>
+              <img
+                src="certificates/itcs-intro-python.png"
+                alt="Introduction to Python Certificate"
+                class="cert"
+              />
+            </div>
+            <div class="cert-card">
+              <!--JS Essentials-->
+              <h3>JavaScript Essentials</h3>
+              <h4>IT Career Switch</h4>
+              <p class="cert-date">
+                <strong>Completed: </strong>20th January 2026
+              </p>
+              <img
+                src="certificates/itcs-js-essentials.png"
+                alt="JavaScript Essentials Certificate"
+                class="cert"
+              />
+            </div>
+            <div class="cert-card">
+              <!--Intermediate JS-->
+              <h3>Intermediate JavaScript - Build a Dynamic Data Table</h3>
+              <h4>Zenva</h4>
+              <p class="cert-date">
+                <strong>Completed: </strong>13th October 2025
+              </p>
+              <img
+                src="certificates/z-intermediate-js.png"
+                alt="Intermediate JavaScript Certificate"
+                class="cert"
+              />
+            </div>
+            <div class="cert-card">
+              <!--JS Foundations-->
+              <h3>JavaScript Foundations</h3>
+              <h4>Zenva</h4>
+              <p class="cert-date">
+                <strong>Completed: </strong>10th October 2025
+              </p>
+              <img
+                src="certificates/z-js-foundations.png"
+                alt="JavaScript Foundations Certificate"
+                class="cert"
+              />
+            </div>
+            <div class="cert-card">
+              <!--JS Learning Game-->
+              <h3>JavaScript Mini-Project - Language Learning Game</h3>
+              <h4>Zenva</h4>
+              <p class="cert-date">
+                <strong>Completed: </strong>30th September 2025
+              </p>
+              <img
+                src="certificates/z-js-learning-game.png"
+                alt="JavaScript Language Learning Game Certificate"
+                class="cert"
+              />
+            </div>
+            <div class="cert-card">
+              <!--JS for Beginners-->
+              <h3>JavaScript Programming for Beginners</h3>
+              <h4>Zenva</h4>
+              <p class="cert-date">
+                <strong>Completed: </strong>30th September 2025
+              </p>
+              <img
+                src="certificates/z-js-beginners.png"
+                alt="JavaScript for Beginners Certificate"
+                class="cert"
+              />
+            </div>
+            <div class="cert-card">
+              <!--CSS Foundations-->
+              <h3>CSS Foundations</h3>
+              <h4>Zenva</h4>
+              <p class="cert-date">
+                <strong>Completed: </strong>23rd September 2025
+              </p>
+              <img
+                src="certificates/z-ccs-foundations.png"
+                alt="CSS Foundations Certificate"
+                class="cert"
+              />
+            </div>
+            <div class="cert-card">
+              <!--HTML Foundations-->
+              <h3>HTML Foundations</h3>
+              <h4>Zenva</h4>
+              <p class="cert-date">
+                <strong>Completed: </strong>16th September 2025
+              </p>
+              <img
+                src="certificates/z-html-foundations.png"
+                alt="HTML Foundations Certificate"
+                class="cert"
+              />
+            </div>
+            <div class="cert-card">
+              <!--Responsive Website-->
+              <h3>Create Your First Responsive Website</h3>
+              <h4>Zenva</h4>
+              <p class="cert-date">
+                <strong>Completed: </strong>8th September 2025
+              </p>
+              <img
+                src="certificates/z-responsive-website.png"
+                alt="Responsive Website Certificate"
+                class="cert"
+              />
+            </div>
+            <div class="cert-card">
+              <!--Intro to HTML and CSS-->
+              <h3>Intro to Web Development with HTML and CSS</h3>
+              <h4>Zenva</h4>
+              <p class="cert-date">
+                <strong>Completed: </strong>5th September 2025
+              </p>
+              <img
+                src="certificates/z-intro-html-css.png"
+                alt="Intro to HTML and CSS Certificate"
+                class="cert"
+              />
+            </div>
           </div>
-          <div class="cert-card">
-            <!--Node.js-->
-            <h3>Learn Node.js</h3>
-            <h4>Codecademy</h4>
-            <p class="cert-date">
-              <strong>Completed: </strong>23rd September 2026
-            </p>
-            <img
-              src="certificates/cc-nodejs.png"
-              alt="Learn Node.js Certificate"
-              class="cert"
-            />
-          </div>
-          <div class="cert-card">
-            <!--Interactive Websites-->
-            <h3>Building Interactive JavaScript Websites</h3>
-            <h4>Codecademy</h4>
-            <p class="cert-date"><strong>Completed: </strong>21st May 2026</p>
-            <img
-              src="certificates/cc-interactive-websites.png"
-              alt="Building Interactive JavaScript Websites Certificate"
-              class="cert"
-            />
-          </div>
-          <div class="cert-card">
-            <!--Intro to Python-->
-            <h3>Introduction to Python</h3>
-            <h4>IT Career Switch</h4>
-            <p class="cert-date">
-              <strong>Completed: </strong>12th February 2026
-            </p>
-            <img
-              src="certificates/itcs-intro-python.png"
-              alt="Introduction to Python Certificate"
-              class="cert"
-            />
-          </div>
-          <div class="cert-card">
-            <!--JS Essentials-->
-            <h3>JavaScript Essentials</h3>
-            <h4>IT Career Switch</h4>
-            <p class="cert-date">
-              <strong>Completed: </strong>20th January 2026
-            </p>
-            <img
-              src="certificates/itcs-js-essentials.png"
-              alt="JavaScript Essentials Certificate"
-              class="cert"
-            />
-          </div>
-          <div class="cert-card">
-            <!--Intermediate JS-->
-            <h3>Intermediate JavaScript - Build a Dynamic Data Table</h3>
-            <h4>Zenva</h4>
-            <p class="cert-date">
-              <strong>Completed: </strong>13th October 2025
-            </p>
-            <img
-              src="certificates/z-intermediate-js.png"
-              alt="Intermediate JavaScript Certificate"
-              class="cert"
-            />
-          </div>
-          <div class="cert-card">
-            <!--JS Foundations-->
-            <h3>JavaScript Foundations</h3>
-            <h4>Zenva</h4>
-            <p class="cert-date">
-              <strong>Completed: </strong>10th October 2025
-            </p>
-            <img
-              src="certificates/z-js-foundations.png"
-              alt="JavaScript Foundations Certificate"
-              class="cert"
-            />
-          </div>
-          <div class="cert-card">
-            <!--JS Learning Game-->
-            <h3>JavaScript Mini-Project - Language Learning Game</h3>
-            <h4>Zenva</h4>
-            <p class="cert-date">
-              <strong>Completed: </strong>30th September 2025
-            </p>
-            <img
-              src="certificates/z-js-learning-game.png"
-              alt="JavaScript Language Learning Game Certificate"
-              class="cert"
-            />
-          </div>
-          <div class="cert-card">
-            <!--JS for Beginners-->
-            <h3>JavaScript Programming for Beginners</h3>
-            <h4>Zenva</h4>
-            <p class="cert-date">
-              <strong>Completed: </strong>30th September 2025
-            </p>
-            <img
-              src="certificates/z-js-beginners.png"
-              alt="JavaScript for Beginners Certificate"
-              class="cert"
-            />
-          </div>
-          <div class="cert-card">
-            <!--CSS Foundations-->
-            <h3>CSS Foundations</h3>
-            <h4>Zenva</h4>
-            <p class="cert-date">
-              <strong>Completed: </strong>23rd September 2025
-            </p>
-            <img
-              src="certificates/z-ccs-foundations.png"
-              alt="CSS Foundations Certificate"
-              class="cert"
-            />
-          </div>
-          <div class="cert-card">
-            <!--HTML Foundations-->
-            <h3>HTML Foundations</h3>
-            <h4>Zenva</h4>
-            <p class="cert-date">
-              <strong>Completed: </strong>16th September 2025
-            </p>
-            <img
-              src="certificates/z-html-foundations.png"
-              alt="HTML Foundations Certificate"
-              class="cert"
-            />
-          </div>
-          <div class="cert-card">
-            <!--Responsive Website-->
-            <h3>Create Your First Responsive Website</h3>
-            <h4>Zenva</h4>
-            <p class="cert-date">
-              <strong>Completed: </strong>8th September 2025
-            </p>
-            <img
-              src="certificates/z-responsive-website.png"
-              alt="Responsive Website Certificate"
-              class="cert"
-            />
-          </div>
-          <div class="cert-card">
-            <!--Intro to HTML and CSS-->
-            <h3>Intro to Web Development with HTML and CSS</h3>
-            <h4>Zenva</h4>
-            <p class="cert-date">
-              <strong>Completed: </strong>5th September 2025
-            </p>
-            <img
-              src="certificates/z-intro-html-css.png"
-              alt="Intro to HTML and CSS Certificate"
-              class="cert"
-            />
-          </div>
+          <button
+            type="button"
+            class="carousel-arrow carousel-next"
+            aria-label="Next certificate"
+          ></button>
         </div>
       </div>
     </section>

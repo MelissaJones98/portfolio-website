@@ -100,16 +100,7 @@ nav {
   box-shadow: 10px 10px 5px 0 rgba(9, 3, 46, 0.527);
 }
 
-.cert-card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 30px;
-  margin-bottom: 20px;
-}
-
-.project-carousel {
+.carousel {
   display: grid;
   /* minmax(0, 1fr) lets the middle column shrink, so the row of cards scrolls instead of stretching the page */
   grid-template-columns: auto minmax(0, 1fr) auto;
@@ -119,7 +110,7 @@ nav {
   margin-bottom: 20px;
 }
 
-.project-card-container {
+.carousel-track {
   display: flex;
   gap: 30px;
   overflow-x: auto;
@@ -157,35 +148,35 @@ nav {
 }
 
 /* the 2px nudges make each triangle look centred, as most of its visual weight is at the wide end */
-#projects-prev::before {
+.carousel-prev::before {
   clip-path: polygon(100% 0, 100% 100%, 0 50%);
   transform: translateX(-2px);
 }
 
-#projects-next::before {
+.carousel-next::before {
   clip-path: polygon(0 0, 100% 50%, 0 100%);
   transform: translateX(2px);
 }
 
 /* only animate the scrolling for visitors who haven't asked for reduced motion */
 @media (prefers-reduced-motion: no-preference) {
-  .project-card-container {
+  .carousel-track {
     scroll-behavior: smooth;
   }
 }
 
 /* on small screens the arrows move below the cards so the cards keep their width */
 @media (max-width: 600px) {
-  .project-carousel {
+  .carousel {
     grid-template-columns: 1fr 1fr;
   }
 
-  .project-card-container {
+  .carousel-track {
     grid-column: 1 / -1;
     grid-row: 1;
   }
 
-  #projects-prev {
+  .carousel-prev {
     justify-self: end;
   }
 }
@@ -198,15 +189,19 @@ nav {
   border-radius: 1rem;
 }
 
+.cert-card,
+.project-card {
+  flex: 0 0 100%; /* each card fills the row, so only one shows at a time */
+  scroll-snap-align: start;
+}
+
 .cert-card {
   text-align: center;
 }
 
 .project-card {
-  flex: 0 0 100%; /* each card fills the row, so only one shows at a time */
   height: 600px;
   overflow-y: auto; /* long projects scroll inside their card */
-  scroll-snap-align: start;
   scrollbar-width: thin;
 }
 
