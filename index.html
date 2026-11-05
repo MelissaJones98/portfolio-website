@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Alata&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=PT+Mono&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
@@ -43,7 +43,7 @@
     <section id="about" class="section">
       <div id="about-section-card">
         <h2>About Me</h2>
-        <p>
+        <p class="bio">
           I'm a loyal, hardworking problem solver who strives to exceed
           expectations, achieve milestones and ultimately ensure that
           individually, as a team, and as a company, we progress. Excellent
@@ -51,7 +51,7 @@
           languages.
         </p>
         <br />
-        <p>
+        <p class="bio">
           I'm a very creative person. Outside of work my hobbies and interests
           include crocheting, gaming, music, and creative makeup. I enjoy
           creative projects such as crafting my own costumes and props for
@@ -94,10 +94,10 @@
                 club, showcasing skills in responsive web design. The club, its
                 members and its meet ups are all made up.
               </p>
-
+              <br />
               <h4>Features</h4>
               <p>The website contains five pages:</p>
-              <ul>
+              <ul class="spacing">
                 <li>
                   <strong>Home:</strong> greets the user and introduces the book
                   club
@@ -124,13 +124,13 @@
                 The Join Us form is front-end only. It has no back end, so
                 submitted details are not saved or sent anywhere.
               </p>
-
+              <br />
               <h4>Responsive Design</h4>
-              <p>
+              <p class="spacing">
                 The layout is built with CSS media queries, using no CSS
                 frameworks:
               </p>
-              <table>
+              <table class="spacing">
                 <tr>
                   <th>Layout</th>
                   <th>Screen Width</th>
@@ -139,27 +139,26 @@
                 <tr>
                   <td>Mobile</td>
                   <td>320px to 425px</td>
-                  <td><span class="code">mobile.css</span></td>
+                  <td><code>mobile.css</code></td>
                 </tr>
                 <tr>
                   <td>Tablet</td>
                   <td>426px to 1023px</td>
-                  <td><span class="code">tablet.css</span></td>
+                  <td><code>tablet.css</code></td>
                 </tr>
                 <tr>
                   <td>Desktop</td>
                   <td>1024px and above</td>
-                  <td><span class="code">desktop.css</span></td>
+                  <td><code>desktop.css</code></td>
                 </tr>
               </table>
               <p>
-                <span class="code">desktop.css</span> also has extra adjustments
-                for larger screens from 1440px.
-                <span class="code">general.css</span> holds styles shared across
-                layouts, including the form styling used by both tablet and
-                desktop.
+                <code>desktop.css</code> also has extra adjustments for larger
+                screens from 1440px. <code>general.css</code> holds styles
+                shared across layouts, including the form styling used by both
+                tablet and desktop.
               </p>
-
+              <br />
               <h4>Technologies</h4>
               <ul>
                 <li>HTML</li>
@@ -178,7 +177,7 @@
                 The mini project from the HTML, CSS and JavaScript course run by
                 IT Career Switch.
               </p>
-
+              <br />
               <h4>Technologies</h4>
               <ul>
                 <li>HTML</li>
@@ -199,7 +198,7 @@
                 Codecademy. I plan to use a mobile-first, TDD approach to
                 building this project.
               </p>
-
+              <br />
               <h4>Features</h4>
               <ul>
                 <li>Create boxes/containers</li>
@@ -212,7 +211,7 @@
                   edited)
                 </li>
               </ul>
-
+              <br />
               <h4>Technologies</h4>
               <ul>
                 <li>HTML</li>
@@ -234,7 +233,7 @@
                 front end, and lets customers register an account, browse
                 products and complete a purchase.
               </p>
-
+              <br />
               <h4>Features</h4>
               <ul>
                 <li>
@@ -269,7 +268,7 @@
                 <li>Documented API using Swagger</li>
                 <li>Enable users to view order history</li>
               </ul>
-
+              <br />
               <h4>Technologies</h4>
               <ul>
                 <li>JavaScript</li>
@@ -308,7 +307,7 @@
                 library, create a custom playlist, then save it to their Spotify
                 account.
               </p>
-
+              <br />
               <h4>Features</h4>
               <ul>
                 <li>
@@ -324,7 +323,7 @@
                   Spotify account
                 </li>
               </ul>
-
+              <br />
               <h4>Technologies</h4>
               <ul>
                 <li>HTML</li>
@@ -350,9 +349,9 @@
                 data comes from the OpenWeather Current Weather API. Built with
                 plain HTML, CSS and JavaScript. Vite runs the development server
                 and loads the API key from a
-                <span class="code">.env</span> file.
+                <code>.env</code> file.
               </p>
-
+              <br />
               <h4>Technologies</h4>
               <ul>
                 <li>HTML</li>
@@ -373,7 +372,7 @@
                 A simple browser-based Rock Paper Scissors game built with HTML,
                 CSS and vanilla JavaScript.
               </p>
-
+              <br />
               <h4>Technologies</h4>
               <ul>
                 <li>HTML</li>
@@ -396,14 +395,14 @@
                 PostgreSQL). Please note that credit for any branding and the
                 logo goes to Reddit.
               </p>
-
+              <br />
               <p>
                 There is a big constraint with using the Reddit API for this
                 project. Reddit's Data API now requires developers to formally
                 request non-commercial access (which requires a support ticket,
                 not instant signup) before the developer is approved to use it.
               </p>
-
+              <br />
               <p>
                 As this project is designed entirely to be a learning/portfolio
                 project I have decided to go an alternative route to complete
@@ -412,7 +411,7 @@
                 real full-stack app. This means my forms will need to do genuine
                 authentication.
               </p>
-
+              <br />
               <h4>Features</h4>
               <ul>
                 <li>
@@ -438,7 +437,7 @@
                 <li>Users are delighted with animations and transitions</li>
                 <li>Users are able to leave an error state</li>
               </ul>
-
+              <br />
               <h4>Technologies</h4>
               <ul>
                 <li>React</li>
@@ -475,7 +474,7 @@
                 its English meaning from four options. It's written in plain
                 HTML, CSS and JavaScript, with no frameworks or build step.
               </p>
-
+              <br />
               <h4>Features</h4>
               <ul>
                 <li>151 words across 7 question sets</li>
@@ -487,7 +486,7 @@
                 <li>Questions shuffled each time a quiz page loads</li>
                 <li>A Home button on every quiz page for switching topics</li>
               </ul>
-
+              <br />
               <h4>Technologies</h4>
               <ul>
                 <li>HTML</li>
@@ -507,7 +506,7 @@
                 First attempt at a text based game using HTML, CSS and
                 JavaScript.
               </p>
-
+              <br />
               <h4>Technologies</h4>
               <ul>
                 <li>HTML</li>
@@ -530,7 +529,7 @@
                 Users will be able to remove tasks from the list once they have
                 been completed by clicking on the list item.
               </p>
-
+              <br />
               <h4>Technologies</h4>
               <ul>
                 <li>HTML</li>
@@ -556,7 +555,7 @@
                 generated comprised of three different components selected at
                 random from three different arrays.
               </p>
-
+              <br />
               <h4>Features</h4>
               <ul>
                 <li>
@@ -573,7 +572,7 @@
                   items from three different arrays and concatenating them
                 </li>
               </ul>
-
+              <br />
               <h4>Technologies</h4>
               <ul>
                 <li>HTML</li>
@@ -601,17 +600,15 @@
               </p>
               <ul>
                 <li>
-                  <strong>Backend:</strong> Node.js + Express REST API (<span
-                    class="code"
-                    >backend/</span
-                  >)
+                  <strong>Backend:</strong> Node.js + Express REST API
+                  (<code>backend/</code>)
                 </li>
                 <li>
                   <strong>Frontend:</strong> React, created with Create React
-                  App (<span class="code">frontend/</span>)
+                  App (<code>frontend/</code>)
                 </li>
               </ul>
-
+              <br />
               <h4>Features</h4>
               <ul>
                 <li>View a list of saved restaurants</li>
@@ -619,7 +616,7 @@
                 <li>Star favourite restaurants</li>
                 <li>Leave comments about restaurants</li>
               </ul>
-
+              <br />
               <h4>Technologies</h4>
               <ul>
                 <li>HTML</li>
@@ -643,13 +640,12 @@
                 Acme Bank, a deliberately insecure Node.js/Express banking app.
                 Users can log in, transfer money, download their records, view a
                 public ledger and post on a public forum. The original app
-                (<span class="code">app.js</span>) was open to cross-site
-                scripting (XSS), SQL injection, cross-site request forgery
-                (CSRF) and session theft. This project secured it across six
-                tickets, each tested by attacking the running app before and
-                after the fix.
+                (<code>app.js</code>) was open to cross-site scripting (XSS),
+                SQL injection, cross-site request forgery (CSRF) and session
+                theft. This project secured it across six tickets, each tested
+                by attacking the running app before and after the fix.
               </p>
-
+              <br />
               <h4>Technologies</h4>
               <ul>
                 <li>HTML</li>
@@ -877,6 +873,7 @@
         </form>
       </div>
     </section>
+    <button id="topBtn" title="Go to top">Go to top</button>
     <footer>
       <p>&copy; 2026 Melissa Jones</p>
       <!--&copy; inserts the copyright symbol-->

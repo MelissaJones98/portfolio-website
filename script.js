@@ -1,6 +1,7 @@
 const scroller = document.getElementById("projects-scroller");
 const prevButton = document.getElementById("projects-prev");
 const nextButton = document.getElementById("projects-next");
+const topBtn = document.getElementById("topBtn");
 
 // direction is -1 for left, 1 for right. Moves by one card plus the gap after it.
 function scrollCards(direction) {
@@ -25,3 +26,21 @@ nextButton.addEventListener("click", () => scrollCards(1));
 scroller.addEventListener("scroll", updateArrows);
 window.addEventListener("resize", updateArrows);
 updateArrows();
+
+window.onscroll = function () {
+  if (
+    document.body.scrollTop > 300 ||
+    document.documentElement.scrollTop > 300
+  ) {
+    topBtn.style.display = "block";
+  } else {
+    topBtn.style.display = "none";
+  }
+};
+
+topBtn.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});

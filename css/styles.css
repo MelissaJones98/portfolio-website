@@ -214,15 +214,32 @@ nav {
   text-align: center;
 }
 
-/* the CSS reset removes list padding, this restores the indent for nested lists */
+/* the CSS reset removes list padding, this restores the indent (nested lists add to it) */
 .project-card ul {
-  padding-left: 20px;
+  padding-left: 40px;
+}
+
+/* a smaller indent for sub-lists gives their text more room on phones */
+@media (max-width: 600px) {
+  .project-card ul ul {
+    padding-left: 20px;
+  }
+}
+
+/* merges neighbouring cell borders into single lines, otherwise each cell draws its own box */
+.project-card table {
+  border-collapse: collapse;
 }
 
 /* the CSS reset also removes table cell padding, so the columns need spacing added back */
 .project-card th,
 .project-card td {
   padding: 4px 10px;
+  border: 1px solid var(--icewhite);
+}
+
+.spacing {
+  margin-bottom: 15px;
 }
 
 .cert-date {
@@ -317,6 +334,25 @@ nav {
   margin-top: 10px;
 }
 
+#topBtn {
+  background-color: var(--blueGrey);
+  color: var(--icewhite);
+  border-radius: 5px;
+  padding: 5px;
+  border: 1px solid var(--navyGrey);
+  box-shadow: 5px 5px 5px 0 rgba(9, 3, 46, 0.527);
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 1rem;
+  z-index: 10;
+}
+
+#topBtn:hover {
+  background-color: var(--electricBlue);
+}
+
 footer {
   padding-left: 20px;
 }
@@ -334,16 +370,26 @@ h3 {
 h3 a {
   text-decoration: none;
   color: var(--icewhite);
+  transition: color 0.2s;
+}
+
+h3 a:hover {
+  color: var(--electricBlue);
+  text-decoration: none;
 }
 
 h4 {
   font-size: 20px;
 }
 
-p {
+.bio {
   font-size: 18px;
 }
 
-.code {
-  font-family: "Courier New";
+code {
+  font-family: "PT Mono", monospace;
+  font-size: 0.95em;
+  background-color: var(--navyGrey);
+  padding: 0.1em 0.4em;
+  border-radius: 0.25rem;
 }
