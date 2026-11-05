@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/styles.css" />
     <script src="script.js" defer></script>
     <title>My Portfolio</title>
@@ -11,7 +17,7 @@
     <header id="home">
       <nav>
         <h1 class="logo">My Portfolio</h1>
-        <ul>
+        <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#certs">Certificates</a></li>
@@ -23,28 +29,36 @@
       <div class="profile">
         <img src="photo.png" alt="Profile Photo" id="profile-photo" />
         <div class="profile-text">
-          <h2>Hi, I'm <span>Melissa Jones</span></h2>
-          <h3>Junior Full-Stack Developer</h3>
+          <h2>
+            Hi, I'm
+            <a href="https://github.com/MelissaJones98" class="dev-name"
+              >Melissa Jones</a
+            >
+          </h2>
+          <p>Junior Full-Stack Developer</p>
         </div>
       </div>
     </header>
 
     <section id="about" class="section">
-      <h2>About Me</h2>
-      <p>
-        I'm a loyal, hardworking problem solver who strives to exceed
-        expectations, achieve milestones and ultimately ensure that
-        individually, as a team, and as a company, we progress. Excellent
-        communication skills and knowledge in a multitude of programming
-        languages.
-      </p>
-      <p>
-        I'm a very creative person. Outside of work my hobbies and interests
-        include crocheting, gaming, music, and creative makeup. I enjoy creative
-        projects such as crafting my own costumes and props for Halloween or
-        conventions. I apply this same level of creativity to my coding
-        projects.
-      </p>
+      <div class="section-card">
+        <h2>About Me</h2>
+        <p>
+          I'm a loyal, hardworking problem solver who strives to exceed
+          expectations, achieve milestones and ultimately ensure that
+          individually, as a team, and as a company, we progress. Excellent
+          communication skills and knowledge in a multitude of programming
+          languages.
+        </p>
+        <br />
+        <p>
+          I'm a very creative person. Outside of work my hobbies and interests
+          include crocheting, gaming, music, and creative makeup. I enjoy
+          creative projects such as crafting my own costumes and props for
+          Halloween or conventions. I apply this same level of creativity to my
+          coding projects.
+        </p>
+      </div>
     </section>
 
     <section id="projects" class="section">
@@ -810,10 +824,7 @@
       </form>
     </section>
     <footer>
-      <p>
-        &copy; 2026
-        <a href="https://github.com/MelissaJones98">Melissa Jones</a>
-      </p>
+      <p>&copy; 2026 Melissa Jones</p>
       <!--&copy; inserts the copyright symbol-->
     </footer>
   </body>
