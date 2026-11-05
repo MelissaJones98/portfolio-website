@@ -140,7 +140,8 @@ nav {
 
 /* only on devices with a real pointer, otherwise a tapped arrow stays blue on touchscreens */
 @media (hover: hover) {
-  .carousel-arrow:hover {
+  .carousel-arrow:hover,
+  #contactForm button:hover {
     background-color: var(--electricBlue);
   }
 }
@@ -190,7 +191,8 @@ nav {
 }
 
 .cert-card,
-.project-card {
+.project-card,
+#contactForm {
   background-color: var(--blueGrey);
   padding: 20px 25px;
   border-radius: 1rem;
@@ -234,9 +236,89 @@ nav {
   max-height: 300px;
 }
 
+#contactForm {
+  display: grid;
+  /* the auto column fits the widest label, so the name and email fields start at the same point */
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 10px 15px;
+  max-width: 600px; /* full width fields would be very long to read and type in on desktop */
+  margin: 30px auto 20px;
+}
+
+#contactForm label {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* these span both columns, so only the name and email labels sit beside their fields */
+#contactForm label[for="message"],
+#contactForm textarea,
+#contactForm button {
+  grid-column: 1 / -1;
+}
+
+#contactForm label[for="message"] {
+  margin-top: 15px;
+}
+
+/* on very narrow phones there isn't room for a usable field beside its label */
+@media (max-width: 400px) {
+  #contactForm {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* form fields don't inherit the page font by default */
+#contactForm input,
+#contactForm textarea,
+#contactForm button {
+  font: inherit;
+  color: var(--icewhite);
+  border: none;
+  border-radius: 0.5rem;
+  background-color: var(--navyGrey);
+}
+
+#contactForm input,
+#contactForm textarea {
+  width: 100%;
+  padding: 10px 12px;
+  background-color: var(--icewhite);
+  color: var(--navy);
+}
+
+#contactForm textarea {
+  min-height: 150px;
+  resize: vertical; /* stops the textarea being dragged wider than the card */
+}
+
+#contactForm ::placeholder {
+  color: var(--navy);
+  opacity: 0.7;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+  outline: 2px solid var(--electricBlue);
+}
+
+#contactForm button {
+  justify-self: center;
+  margin-top: 15px;
+  padding: 8px 35px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
 #cert-heading,
-#projects-heading {
+#projects-heading,
+#contact-heading {
   margin-top: 10px;
+}
+
+footer {
+  padding-left: 20px;
 }
 
 /* text and heading only styles */
