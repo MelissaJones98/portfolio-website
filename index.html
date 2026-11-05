@@ -847,7 +847,7 @@
     <section id="contact-me" class="section">
       <div class="section-card">
         <h2 id="contact-heading">Contact Me</h2>
-        <form action="" id="contactForm">
+        <form action="" id="contact-form">
           <label for="name">Name: </label>
           <input
             type="text"
@@ -867,9 +867,15 @@
           />
 
           <label for="message">Message: </label>
-          <textarea name="message" id="message" required></textarea>
+          <textarea
+            name="message"
+            id="message"
+            placeholder="Your Message"
+            required
+          ></textarea>
 
           <button type="submit">Send</button>
+          <p id="form-msg"></p>
         </form>
       </div>
     </section>

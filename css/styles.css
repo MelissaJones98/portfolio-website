@@ -141,7 +141,7 @@ nav {
 /* only on devices with a real pointer, otherwise a tapped arrow stays blue on touchscreens */
 @media (hover: hover) {
   .carousel-arrow:hover,
-  #contactForm button:hover {
+  #contact-form button:hover {
     background-color: var(--electricBlue);
   }
 }
@@ -192,7 +192,7 @@ nav {
 
 .cert-card,
 .project-card,
-#contactForm {
+#contact-form {
   background-color: var(--blueGrey);
   padding: 20px 25px;
   border-radius: 1rem;
@@ -253,7 +253,7 @@ nav {
   max-height: 300px;
 }
 
-#contactForm {
+#contact-form {
   display: grid;
   /* the auto column fits the widest label, so the name and email fields start at the same point */
   grid-template-columns: auto minmax(0, 1fr);
@@ -263,33 +263,38 @@ nav {
   margin: 30px auto 20px;
 }
 
-#contactForm label {
+#contact-form label {
   font-size: 18px;
   font-weight: 700;
 }
 
 /* these span both columns, so only the name and email labels sit beside their fields */
-#contactForm label[for="message"],
-#contactForm textarea,
-#contactForm button {
+#contact-form label[for="message"],
+#contact-form textarea,
+#contact-form button,
+#form-msg {
   grid-column: 1 / -1;
 }
 
-#contactForm label[for="message"] {
+#contact-form label[for="message"] {
   margin-top: 15px;
+}
+
+#form-msg {
+  text-align: center;
 }
 
 /* on very narrow phones there isn't room for a usable field beside its label */
 @media (max-width: 400px) {
-  #contactForm {
+  #contact-form {
     grid-template-columns: minmax(0, 1fr);
   }
 }
 
 /* form fields don't inherit the page font by default */
-#contactForm input,
-#contactForm textarea,
-#contactForm button {
+#contact-form input,
+#contact-form textarea,
+#contact-form button {
   font: inherit;
   color: var(--icewhite);
   border: none;
@@ -297,30 +302,30 @@ nav {
   background-color: var(--navyGrey);
 }
 
-#contactForm input,
-#contactForm textarea {
+#contact-form input,
+#contact-form textarea {
   width: 100%;
   padding: 10px 12px;
   background-color: var(--icewhite);
   color: var(--navy);
 }
 
-#contactForm textarea {
+#contact-form textarea {
   min-height: 150px;
   resize: vertical; /* stops the textarea being dragged wider than the card */
 }
 
-#contactForm ::placeholder {
+#contact-form ::placeholder {
   color: var(--navy);
   opacity: 0.7;
 }
 
-#contactForm input:focus,
-#contactForm textarea:focus {
+#contact-form input:focus,
+#contact-form textarea:focus {
   outline: 2px solid var(--electricBlue);
 }
 
-#contactForm button {
+#contact-form button {
   justify-self: center;
   margin-top: 15px;
   padding: 8px 35px;

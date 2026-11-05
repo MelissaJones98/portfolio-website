@@ -3,6 +3,7 @@ const prevButton = document.getElementById("projects-prev");
 const nextButton = document.getElementById("projects-next");
 const topBtn = document.getElementById("topBtn");
 
+// Project card carousel
 // direction is -1 for left, 1 for right. Moves by one card plus the gap after it.
 function scrollCards(direction) {
   const card = scroller.querySelector(".project-card");
@@ -27,6 +28,7 @@ scroller.addEventListener("scroll", updateArrows);
 window.addEventListener("resize", updateArrows);
 updateArrows();
 
+// Go to top button
 window.onscroll = function () {
   if (
     document.body.scrollTop > 300 ||
@@ -44,3 +46,25 @@ topBtn.addEventListener("click", function () {
     behavior: "smooth",
   });
 });
+
+// Form Handling
+document
+  .getElementById("contact-form")
+  .addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    const msg = document.getElementById("form-msg");
+
+    if (name && email && message) {
+      msg.textContent = "Thank you for reaching out!";
+      msg.style.color = "#86efac";
+      this.reset();
+    } else {
+      msg.textContent = "Please fill in all fields";
+      msg.style.color = "#fca5a5";
+    }
+  });
