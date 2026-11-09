@@ -92,7 +92,13 @@ document
         msg.style.color = "#86efac";
         form.reset();
       } else {
-        msg.textContent = "Sorry, something went wrong. Please try again.";
+        // Formspree explains what went wrong - fall back to {} if the reply isn't JSON (e.g. a server outage page)
+        const data = await response.json().catch(() => ({}));
+        const emailError = data.errors?.some((err) => err.field === "email");
+
+        msg.textContent = emailError
+          ? "Please enter a full email address, e.g. name@example.com"
+          : "Sorry, something went wrong. Please try again.";
         msg.style.color = "#fca5a5";
       }
     } catch (error) {
