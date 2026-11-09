@@ -35,6 +35,25 @@ nav {
   font-weight: 800;
 }
 
+/* on phones and small tablets the logo and links don't fit on one line, so they stack and the links wrap */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+    padding: 1.5rem 5%;
+  }
+
+  .logo {
+    font-size: 1.75rem;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px 20px;
+  }
+}
+
 .nav-links {
   list-style: none;
   display: flex;
@@ -242,6 +261,49 @@ nav {
   height: auto;
   max-width: 80%;
   margin-top: 10px;
+}
+
+/* hints that the screenshots can be tapped to enlarge them on mobile and tablet (matches the width check in script.js) */
+@media (max-width: 1024px) {
+  .project-screenshot {
+    cursor: zoom-in;
+  }
+}
+
+#screenshot-viewer {
+  margin: auto; /* the CSS reset removes the default centring of <dialog> */
+  padding: 0;
+  border: none;
+  background: transparent;
+  max-width: 95vw;
+  max-height: 95vh;
+  overflow: visible; /* lets the close button sit just outside the image */
+}
+
+#screenshot-viewer::backdrop {
+  background-color: rgba(9, 3, 46, 0.85);
+}
+
+#viewer-image {
+  display: block;
+  max-width: 95vw;
+  max-height: 90vh;
+  border-radius: 0.5rem;
+}
+
+.viewer-close {
+  position: absolute;
+  top: -18px;
+  right: -10px;
+  width: 44px; /* 44px is the minimum comfortable tap size */
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--blueGrey);
+  color: var(--icewhite);
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
 }
 
 .spacing {

@@ -33,6 +33,33 @@ function setupCarousel(carousel) {
 
 document.querySelectorAll(".carousel").forEach(setupCarousel);
 
+// Screenshot viewer - tapping a project screenshot on mobile or tablet shows it full screen
+const viewer = document.getElementById("screenshot-viewer");
+const viewerImage = document.getElementById("viewer-image");
+const smallScreen = window.matchMedia("(max-width: 1024px)"); // same width as the zoom-in cursor rule in styles.css
+
+document.querySelectorAll(".project-screenshot").forEach((screenshot) => {
+  screenshot.addEventListener("click", () => {
+    if (!smallScreen.matches) return; // desktop screenshots are already big enough
+
+    viewerImage.src = screenshot.src;
+    viewerImage.alt = screenshot.alt;
+    viewer.showModal(); // showModal adds the dark backdrop, traps focus and closes on Escape
+  });
+});
+
+viewer
+  .querySelector(".viewer-close")
+  .addEventListener("click", () => viewer.close());
+
+viewer.addEventListener("click", (e) => {
+  // A tap on the dark backdrop counts as a click on the dialog itself, but a tap on the picture counts as a click on the <img>.
+  // Only the backdrop closes it, so pinch-zooming the screenshot won't close it by accident.
+  if (e.target === viewer) {
+    viewer.close();
+  }
+});
+
 // Go to top button
 window.onscroll = function () {
   if (
