@@ -252,6 +252,41 @@ nav {
   border: 1px solid var(--icewhite);
 }
 
+/* on phones the three columns are too wide for the card, so each row becomes its own small box
+   with the column heading (from data-label) shown beside each value */
+@media (max-width: 600px) {
+  .project-card table,
+  .project-card tbody,
+  .project-card tr,
+  .project-card td {
+    display: block;
+  }
+
+  /* the headings are now repeated on every row, so the original heading row is hidden */
+  .project-card thead {
+    display: none;
+  }
+
+  .project-card tr {
+    border: 1px solid var(--icewhite);
+    border-radius: 0.5rem;
+    padding: 6px 0;
+  }
+
+  .project-card tr + tr {
+    margin-top: 10px;
+  }
+
+  .project-card td {
+    border: none;
+  }
+
+  .project-card td::before {
+    content: attr(data-label) ": ";
+    font-weight: 700;
+  }
+}
+
 .screenshot-container {
   display: flex;
   justify-content: center;
