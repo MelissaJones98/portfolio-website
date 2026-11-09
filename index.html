@@ -901,6 +901,16 @@
             required
           ></textarea>
 
+          <!-- Honeypot: hidden from people, but spam bots fill it in. Formspree discards any submission where _gotcha has a value. -->
+          <input
+            type="text"
+            name="_gotcha"
+            style="display: none"
+            tabindex="-1"
+            autocomplete="off"
+            aria-hidden="true"
+          />
+
           <button type="submit">Send</button>
           <p id="form-msg"></p>
         </form>

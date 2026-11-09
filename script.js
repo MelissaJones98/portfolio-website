@@ -52,24 +52,55 @@ topBtn.addEventListener("click", function () {
   });
 });
 
-// Form Handling
+// Form Handling - sends the message to Formspree, which emails it to me
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/maeegezj";
+
 document
   .getElementById("contact-form")
-  .addEventListener("submit", function (e) {
+  .addEventListener("submit", async function (e) {
     e.preventDefault();
 
+    const form = this;
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
     const message = document.getElementById("message").value.trim();
 
     const msg = document.getElementById("form-msg");
+    const sendButton = form.querySelector("button[type='submit']");
 
-    if (name && email && message) {
-      msg.textContent = "Thank you for reaching out!";
-      msg.style.color = "#86efac";
-      this.reset();
-    } else {
+    if (!name || !email || !message) {
       msg.textContent = "Please fill in all fields";
       msg.style.color = "#fca5a5";
+      return;
+    }
+
+    // Stop double-clicks sending the message twice while we wait
+    sendButton.disabled = true;
+    msg.textContent = "Sending...";
+    msg.style.color = "";
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        body: new FormData(form), // picks up every input by its name="" attribute
+        headers: { Accept: "application/json" }, // tells Formspree to reply with JSON instead of redirecting
+      });
+
+      if (response.ok) {
+        msg.textContent =
+          "Thank you for reaching out! I'll get back to you soon.";
+        msg.style.color = "#86efac";
+        form.reset();
+      } else {
+        msg.textContent = "Sorry, something went wrong. Please try again.";
+        msg.style.color = "#fca5a5";
+      }
+    } catch (error) {
+      // No response at all, e.g. the visitor is offline
+      msg.textContent =
+        "Couldn't send your message. Please check your connection and try again.";
+      msg.style.color = "#fca5a5";
+    } finally {
+      sendButton.disabled = false;
     }
   });
